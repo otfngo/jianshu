@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.div`
   height: 56px;
 `
 
-export const Logo = styled.a`
+export const Logo = styled.div`
   display: inline-block;
   width: 100px;
   height: 56px;
@@ -38,4 +38,9 @@ export const SearchInfo = styled.div`
     border-bottom-color: lightgrey;
     margin-top: 1px;
   }
+`
+
+export const Spinner = styled.div`
+  display: inline-block;
+  transition: all 0.3s ease-out;
 `

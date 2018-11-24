@@ -1,3 +1,7 @@
+export const input_change = 'input_change'
 export const search_focus = 'search_focus'
 export const search_blur = 'search_blur'
 export const change_list = 'change_list'
+export const mouse_enter = 'mouse_enter'
+export const mouse_leave = 'mouse_leave'
+export const change_page = 'change_page'

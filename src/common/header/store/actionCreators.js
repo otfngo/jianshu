@@ -1,18 +1,24 @@
 import { fromJS } from 'immutable'
 import axios from 'axios'
-import { search_focus, search_blur, change_list } from './actionTypes'
+import { input_change, search_focus, search_blur, change_list, mouse_enter, mouse_leave, change_page } from './actionTypes'
 
-export const getSearchFocusAction = () => ({
+export const inputChange = (value) => ({
+  type: input_change,
+  value
+})
+
+export const searchFocus = () => ({
   type: search_focus
 })
 
-export const getSearchBlurAction = () => ({
+export const searchBlur = () => ({
   type: search_blur
 })
 
 const changeList = data => ({
   type: change_list,
-  data: fromJS(data)
+  data: fromJS(data),
+  totalPage: Math.ceil(data.length / 10)
 })
 
 export const getHeaderList = () => {
@@ -25,3 +31,16 @@ export const getHeaderList = () => {
     })
   }
 }
+
+export const mouseEnter = () => ({
+  type: mouse_enter
+})
+
+export const mouseLeave = () => ({
+  type: mouse_leave
+})
+
+export const changePage = (page) => ({
+  type: change_page,
+  page
+})
