@@ -7,7 +7,6 @@ import { HeaderWrapper, Logo, SearchWrapper, SearchInfo, Spinner } from './style
 class Header extends PureComponent {
   constructor(props) {
     super(props)
-
     this.spinRef = React.createRef()
   }
 
@@ -17,7 +16,7 @@ class Header extends PureComponent {
     const { searchValue, isFocused, isMouseEnter, list, page, totalPage, handleInputChange, handleInputFocus, handleInputBlur, handleMouseEnter, handleMouseLeave, handleChangePage } = this.props
     
     return (
-      <HeaderWrapper className="display-flex align-items-center border border-bottom border-light">
+      <HeaderWrapper className="display-flex align-items-center border-bottom border-light">
         <Link to="/">
           <Logo></Logo>
         </Link>
