@@ -27,16 +27,19 @@ export const SearchWrapper = styled.div`
 export const SearchInfo = styled.div`
   position: absolute;
   left: 0;
-  top: calc(100% + 8px);
+  top: calc(100% + 0.75rem);
   width: 220px;
   &::before {
     content: '';
     position: absolute;
-    left: 16px;
-    top: -16px;
-    border: 8px solid transparent;
-    border-bottom-color: lightgrey;
-    margin-top: 1px;
+    top: -0.5rem;
+    left: 1rem;
+    padding: 0.4rem;
+    border: inherit;
+    background: inherit;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
   }
 `
 
